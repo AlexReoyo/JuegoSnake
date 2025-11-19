@@ -1,0 +1,45 @@
+clases:
+Pantalla
+	Atributos:
+	Altura
+	Ancho
+	Imagen fondo
+	
+	Métodos:
+	mostrar
+	Liberar Imagen
+
+Serpiente:
+	Atributos:
+	nº cuadrados
+	cuerpo (array de cuadrados)
+	estado de vida
+
+	Métodos:
+ 	mostrar
+ 	mover
+	crecer
+	Liberar imagen
+	
+	
+Cuadrado: 
+	Atributos:
+	alto
+	ancho
+	Imagen fondo
+	x
+	y
+
+	Métodos:
+ 	mostrar
+ 	Liberar Imagen
+
+Puntuación:
+	Atributos:
+	numero
+	x
+	y
+	
+	Métodos:
+	mostrarse
+	incrementar
