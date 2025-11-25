@@ -1,9 +1,9 @@
-package io.github.JuegoSnake.gwt;
+package com.politecnicomalaga.snake.gwt;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import io.github.JuegoSnake.Core;
+import com.politecnicomalaga.snake.Main;
 
 /** Launches the GWT application. */
 public class GwtLauncher extends GwtApplication {
@@ -21,6 +21,6 @@ public class GwtLauncher extends GwtApplication {
 
         @Override
         public ApplicationListener createApplicationListener () {
-            return new Core();
+            return new Main();
         }
 }

@@ -10,10 +10,12 @@
 
   <!-- "Inherits" lines are how GWT knows where to look for code and configuration in other projects or libraries. -->
   <inherits name="com.badlogic.gdx.backends.gdx_backends_gwt" />
-  <inherits name="io.github.JuegoSnake.Core" />
+  <inherits name="Box2DLights" />
+  <inherits name="com.badlogic.gdx.physics.box2d.box2d-gwt" />
+  <inherits name="com.politecnicomalaga.snake.Main" />
 
   <!-- You must change this if you rename packages later, or rename GwtLauncher. -->
-  <entry-point class="io.github.JuegoSnake.gwt.GwtLauncher" />
+  <entry-point class="com.politecnicomalaga.snake.gwt.GwtLauncher" />
 
   <!-- Reflection includes may be needed for your code or library code. Each value is separated by periods ('.'). -->
   <!-- You can include a full package by not including the name of a type at the end. -->

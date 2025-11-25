@@ -14,7 +14,7 @@
  */
 //Note, the above license and copyright applies to this file only.
 
-package io.github.JuegoSnake.lwjgl3;
+package com.politecnicomalaga.snake.lwjgl3;
 
 import com.badlogic.gdx.Version;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3NativesLoader;

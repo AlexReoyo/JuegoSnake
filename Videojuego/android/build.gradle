@@ -9,7 +9,7 @@ apply plugin: 'com.android.application'
 
 
 android {
-  namespace "io.github.JuegoSnake"
+  namespace "com.politecnicomalaga.snake"
   compileSdk 35
   sourceSets {
     main {
@@ -31,7 +31,7 @@ android {
 		}
   }
   defaultConfig {
-    applicationId 'io.github.JuegoSnake'
+    applicationId 'com.politecnicomalaga.snake'
     minSdkVersion 21
     targetSdkVersion 35
     versionCode 1
@@ -62,6 +62,14 @@ dependencies {
   implementation "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
   implementation project(':core')
 
+  natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-arm64-v8a"
+  natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-armeabi-v7a"
+  natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86"
+  natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
+  natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-arm64-v8a"
+  natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-armeabi-v7a"
+  natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86"
+  natives "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-x86_64"
   natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-arm64-v8a"
   natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
   natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
@@ -119,7 +127,7 @@ tasks.register('run', Exec) {
   }
 
   def adb = path + "/platform-tools/adb"
-  commandLine "$adb", 'shell', 'am', 'start', '-n', 'io.github.JuegoSnake/io.github.JuegoSnake.android.AndroidLauncher'
+  commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.politecnicomalaga.snake/com.politecnicomalaga.snake.android.AndroidLauncher'
 }
 
 eclipse.project.name = appName + "-android"
