@@ -33,6 +33,10 @@ public class Cuadrado {
         return lado;
     }
 
+    public Texture getImagen() {
+        return imagen;
+    }
+
     //setter
     public void setX(int x) {
         this.x = x;
@@ -42,6 +46,10 @@ public class Cuadrado {
     }
     public void setLado(int lado) {
         this.lado = lado;
+    }
+
+    public void setImagen(Texture imagen) {
+        this.imagen = imagen;
     }
 
     //más comportamientos
@@ -57,4 +65,5 @@ public class Cuadrado {
                 break;
         }
     }
+
 }
