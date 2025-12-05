@@ -1,5 +1,7 @@
 package com.politecnicomalaga.snake.model;
 
+import com.badlogic.gdx.graphics.Texture;
+
 public class Snake {
     public enum Sentido { //forma de definir una variable con tus propios valores y no se puedan utilizar otros
         ARR,
