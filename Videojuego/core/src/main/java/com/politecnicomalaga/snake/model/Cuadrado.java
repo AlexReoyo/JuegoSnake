@@ -1,21 +1,25 @@
 package com.politecnicomalaga.snake.model;
 
+import com.badlogic.gdx.graphics.Texture;
+
 public class Cuadrado {
 
     //atributos - almacenan el estado
     //por defecto son privados
     private int x,y; //esquina superior izquierda
     private int lado;
+    private Texture imagen;
 
     //métodos - implementan el comportamiento con algoritmos
     //todos los métodos por defecto son public
 
     //crearse
     //Al menos un método de creación, se llaman constructores
-    public Cuadrado(int x, int y, int lado){
+    public Cuadrado(int x, int y, int lado, Texture imagen){
         this.x= x; //this es el propio objeto que se está creando
         this.y= y;
         this.lado = lado;
+        this.imagen=imagen;
     }
 
     //getter
