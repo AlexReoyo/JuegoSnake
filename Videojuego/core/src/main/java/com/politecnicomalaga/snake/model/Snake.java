@@ -31,7 +31,47 @@ public class Snake {
     }
     //getters
 
+    public int getNum_cuadrados() {
+        return num_cuadrados;
+    }
+
+    public Sentido getDireccion() {
+        return direccion;
+    }
+
+    public Cuadrado[] getCuerpo() {
+        return cuerpo;
+    }
+
+    public int getAlto() {
+        return alto;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
     //setters
+
+    public void setNum_cuadrados(int num_cuadrados) {
+        this.num_cuadrados = num_cuadrados;
+    }
+
+    public void setDireccion(Sentido direccion) {
+        this.direccion = direccion;
+    }
+
+    public void setCuerpo(Cuadrado[] cuerpo) {
+        this.cuerpo = cuerpo;
+    }
+
+    public void setAlto(int alto) {
+        this.alto = alto;
+    }
+
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
 
     //otros métodos
     public void crecer (Texture cabezaArriba, Texture cabezaAbajo, Texture cabezaDerecha, Texture cabezaIzquierda){
