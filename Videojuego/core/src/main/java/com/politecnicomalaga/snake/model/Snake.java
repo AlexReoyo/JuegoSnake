@@ -1,6 +1,7 @@
 package com.politecnicomalaga.snake.model;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Snake {
     public enum Sentido { //forma de definir una variable con tus propios valores y no se puedan utilizar otros
@@ -101,5 +102,12 @@ public class Snake {
         cuerpo[1].setImagen(cuerpo[num_cuadrados-1].getImagen());
         num_cuadrados++;
 
+    }
+
+
+    public void pintar (SpriteBatch batch){
+        for (int i = 0;i<num_cuadrados;i++){
+            cuerpo[i].pintar(batch);
+        }
     }
 }
