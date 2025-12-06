@@ -52,6 +52,11 @@ public class Main extends ApplicationAdapter {
     @Override
     public void dispose() {
         batch.dispose();
-        image.dispose();
+        cabezaIzquierda.dispose();
+        cabezaDerecha.dispose();
+        cabezaAbajo.dispose();
+        cabezaArriba.dispose();
+        cuerpoHorizontal.dispose();
+        gameOver.dispose();
     }
 }
