@@ -110,4 +110,36 @@ public class Snake {
             cuerpo[i].pintar(batch);
         }
     }
+
+
+    public void mover (Texture cabezaArriba, Texture cabezaAbajo, Texture cabezaDerecha, Texture cabezaIzquierda){
+        Cuadrado cabeza = cuerpo [0];
+        for (int i = num_cuadrados-1;i>0;i--){
+            cuerpo[i].setX(cuerpo[i-1].getX());
+            cuerpo[i].setY(cuerpo[i-1].getY());
+        }
+        switch (direccion){
+            case ABA:
+                cabeza.setImagen(cabezaAbajo);
+                cabeza.mover(Sentido.ABA);
+                break;
+            case IZQ:
+                cabeza.setImagen(cabezaIzquierda);
+
+                cabeza.mover(Sentido.IZQ);
+                break;
+            case DER:
+                cabeza.setImagen(cabezaDerecha);
+
+                cabeza.mover(Sentido.DER);
+                break;
+            case ARR:
+                cabeza.setImagen(cabezaArriba);
+
+                cabeza.mover(Sentido.ARR);
+                break;
+        }
+
+        cuerpo[0]=cabeza;
+    }
 }
