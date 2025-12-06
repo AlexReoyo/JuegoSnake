@@ -34,4 +34,32 @@ public class Snake {
     //setters
 
     //otros métodos
+    public void crecer (Texture cabezaArriba, Texture cabezaAbajo, Texture cabezaDerecha, Texture cabezaIzquierda){
+        Cuadrado nuevaCabeza = new Cuadrado(cuerpo[0].getX(),
+            cuerpo[0].getY(),
+            cuerpo[0].getLado(),
+            cuerpo[0].getImagen());
+        switch (direccion){
+            case ABA:
+                nuevaCabeza.setImagen(cabezaAbajo);
+                break;
+            case IZQ:
+                nuevaCabeza.setImagen(cabezaIzquierda);
+                break;
+            case DER:
+                nuevaCabeza.setImagen(cabezaDerecha);
+                break;
+            case ARR:
+                nuevaCabeza.setImagen(cabezaArriba);
+                break;
+        }
+        nuevaCabeza.mover(direccion);
+        for (int i = num_cuadrados-1;i>=0;i--){
+            cuerpo[i+1] = cuerpo[i];
+        }
+        cuerpo[0] = nuevaCabeza;
+        cuerpo[1].setImagen(cuerpo[num_cuadrados-1].getImagen());
+        num_cuadrados++;
+
+    }
 }
