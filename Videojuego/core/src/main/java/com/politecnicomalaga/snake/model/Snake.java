@@ -142,4 +142,20 @@ public class Snake {
 
         cuerpo[0]=cabeza;
     }
+
+    public void cambiaDireccion(int x, int y){
+        if (direccion==Sentido.ABA || direccion==Sentido.ARR){
+            if (x<cuerpo[0].getX()){
+                this.direccion=Sentido.IZQ;
+            } else{
+                this.direccion=Sentido.DER;
+            }
+        } else {
+            if (y<cuerpo[0].getY()){
+                this.direccion=Sentido.ABA;
+            } else {
+                this.direccion=Sentido.ARR;
+            }
+        }
+    }
 }
