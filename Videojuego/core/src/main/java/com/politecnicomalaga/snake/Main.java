@@ -62,6 +62,21 @@ public class Main extends ApplicationAdapter {
             jugando =false;
         }
 
+        //actualización mundo virtual
+        if (jugando) {
+            contadorFrames++;
+            if (contadorFrames == 30) {
+                contadorVeces++;
+                contadorFrames = 0;
+                if (contadorVeces == 3) {
+                    contadorVeces = 0;
+                    serpiente.crecer(cabezaArriba,cabezaAbajo,cabezaDerecha,cabezaIzquierda);
+                } else {
+                    serpiente.mover(cabezaArriba,cabezaAbajo,cabezaDerecha,cabezaIzquierda);
+                }
+            }
+        }
+
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
         batch.begin();
         batch.draw(image, 140, 210);
