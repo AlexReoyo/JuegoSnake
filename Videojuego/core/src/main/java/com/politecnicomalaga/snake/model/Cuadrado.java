@@ -6,7 +6,7 @@ public class Cuadrado {
 
     //atributos - almacenan el estado
     //por defecto son privados
-    private int x,y; //esquina superior izquierda
+    private int x, y; //esquina superior izquierda
     private int lado;
     private Texture imagen;
 
@@ -15,20 +15,22 @@ public class Cuadrado {
 
     //crearse
     //Al menos un método de creación, se llaman constructores
-    public Cuadrado(int x, int y, int lado, Texture imagen){
-        this.x= x; //this es el propio objeto que se está creando
-        this.y= y;
+    public Cuadrado(int x, int y, int lado, Texture imagen) {
+        this.x = x; //this es el propio objeto que se está creando
+        this.y = y;
         this.lado = lado;
-        this.imagen=imagen;
+        this.imagen = imagen;
     }
 
     //getter
     public int getY() {
         return y;
     }
+
     public int getX() {
         return x;
     }
+
     public int getLado() {
         return lado;
     }
@@ -41,9 +43,11 @@ public class Cuadrado {
     public void setX(int x) {
         this.x = x;
     }
+
     public void setY(int y) {
         this.y = y;
     }
+
     public void setLado(int lado) {
         this.lado = lado;
     }
@@ -53,15 +57,19 @@ public class Cuadrado {
     }
 
     //más comportamientos
-    public void mover(Snake.Sentido direccion){
-        switch (direccion){
-            case ARR: y-=lado;
+    public void mover(Snake.Sentido direccion) {
+        switch (direccion) {
+            case ARR:
+                y += lado;
                 break;
-            case ABA: y+=lado;
+            case ABA:
+                y -= lado;
                 break;
-            case DER: x+=lado;
+            case DER:
+                x += lado;
                 break;
-            case IZQ: x-=lado;
+            case IZQ:
+                x -= lado;
                 break;
         }
     }
