@@ -73,5 +73,7 @@ public class Cuadrado {
                 break;
         }
     }
-
+    public void pintar (SpriteBatch pantalla){
+        pantalla.draw(imagen, x, y, lado, lado);
+    }
 }
