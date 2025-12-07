@@ -73,7 +73,12 @@ public class Cuadrado {
                 break;
         }
     }
-    public void pintar (SpriteBatch pantalla){
+
+    public void pintar(SpriteBatch pantalla) {
         pantalla.draw(imagen, x, y, lado, lado);
+    }
+
+    public boolean estaEncima(Cuadrado otro) {
+        return (this.getX() == otro.getX() && this.getY() == otro.getY());
     }
 }
