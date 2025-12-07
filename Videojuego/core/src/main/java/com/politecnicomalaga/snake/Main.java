@@ -43,6 +43,19 @@ public class Main extends ApplicationAdapter {
 
     @Override
     public void render() {
+        //control estado
+        //pullig de la pantalla
+        if (Gdx.input.justTouched()){
+            if (jugando) {
+                int x = Gdx.input.getX();
+                int y = Gdx.graphics.getHeight() - Gdx.input.getY();
+                serpiente.cambiaDireccion(x, y);
+            } else {
+                serpiente = new Snake(300 , 300, 40, anchoPantalla,altoPantalla,cabezaDerecha,cuerpoHorizontal);
+                jugando=true;
+            }
+        }
+
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
         batch.begin();
         batch.draw(image, 140, 210);
