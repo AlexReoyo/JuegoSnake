@@ -182,5 +182,19 @@ public class Snake {
         }
     }
 
-    
+    public boolean salir(){
+        if (cuerpo[0].getX()> ancho) {
+            return true;
+        }
+        if (cuerpo[0].getX()<0) {
+            return true;
+        }
+        if (cuerpo[0].getY()> alto){
+            return true;
+        }
+        if (cuerpo[0].getY()< 0){
+            return true;
+        }
+        return false;
+    }
 }
