@@ -77,9 +77,14 @@ public class Main extends ApplicationAdapter {
             }
         }
 
+        //pintar
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
         batch.begin();
-        batch.draw(image, 140, 210);
+        if (jugando) {
+            serpiente.pintar(batch);
+        } else {
+            batch.draw(gameOver,(anchoPantalla/2)/2, (altoPantalla/2)/2);
+        }
         batch.end();
     }
 
