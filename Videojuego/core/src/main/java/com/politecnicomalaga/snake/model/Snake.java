@@ -158,4 +158,43 @@ public class Snake {
             }
         }
     }
+
+    public boolean estaMuerta(){
+        if (colisiono()){
+            return true;
+        }else if (salir()){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+    public boolean colisiono(){
+        if (num_cuadrados<5){
+            return false;
+        } else {
+            for (int i = 4;i<num_cuadrados;i++){
+                if (cuerpo[0].estaEncima(cuerpo[i])) {
+                    return true;
+                }
+            }
+            return  false;
+        }
+    }
+
+    public boolean salir(){
+        if (cuerpo[0].getX()> ancho) {
+            return true;
+        }
+        if (cuerpo[0].getX()<0) {
+            return true;
+        }
+        if (cuerpo[0].getY()> alto){
+            return true;
+        }
+        if (cuerpo[0].getY()< 0){
+            return true;
+        }
+        return false;
+    }
 }
