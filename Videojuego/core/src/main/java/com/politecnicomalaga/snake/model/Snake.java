@@ -158,4 +158,14 @@ public class Snake {
             }
         }
     }
+
+    public boolean estaMuerta(){
+        if (colisiono()){
+            return true;
+        }else if (salir()){
+            return true;
+        } else{
+            return false;
+        }
+    }
 }
