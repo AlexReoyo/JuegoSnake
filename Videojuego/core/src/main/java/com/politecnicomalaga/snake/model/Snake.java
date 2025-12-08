@@ -168,4 +168,19 @@ public class Snake {
             return false;
         }
     }
+
+    public boolean colisiono(){
+        if (num_cuadrados<5){
+            return false;
+        } else {
+            for (int i = 4;i<num_cuadrados;i++){
+                if (cuerpo[0].estaEncima(cuerpo[i])) {
+                    return true;
+                }
+            }
+            return  false;
+        }
+    }
+
+    
 }
